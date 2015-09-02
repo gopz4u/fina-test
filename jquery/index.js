@@ -5,11 +5,11 @@ function onDeviceReady() {
 }
 
 $(document).on("pageshow", function () {
-    $.mobile.loading("show");
+    $.mobile.loading("hide");
     $("body");
     if ($("#contactsList").length == 1) {
-        $("body").addClass('ui-disabled').css("background", "#000");
-        $.mobile.loading("show");
+        $("body");
+        $.mobile.loading("hide");
         var options = new ContactFindOptions();
         options.filter = "";
         options.multiple = true;
