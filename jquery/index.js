@@ -5,8 +5,8 @@ function onDeviceReady() {
 }
 
 $(document).on("pageshow", function () {
-    $.mobile.loading("hide");
-    $("body").removeClass('ui-disabled');
+    $.mobile.loading("show");
+    $("body");
     if ($("#contactsList").length == 1) {
         $("body").addClass('ui-disabled').css("background", "#000");
         $.mobile.loading("show");
@@ -49,7 +49,7 @@ function onSuccess(contacts) {
     $("#contactsList").listview().listview('refresh');
     $(".innerlsv").listview().listview('refresh');
     $.mobile.loading("hide");
-    $("body").removeClass('ui-disabled');
+    $("body");
 }
 
 function onError(contactError) {
